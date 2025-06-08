@@ -19,4 +19,4 @@ Construir un sitio web personal que sirva como portafolio profesional, incluyend
 
 ## Despliegue 
 
-desplegado en Vercel proximamente
+desplegado en Vercel link: [https://web-personal-mariannis-garcia.vercel.app] (https://web-personal-mariannis-garcia.vercel.app) 
