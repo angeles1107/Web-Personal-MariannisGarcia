@@ -1,0 +1,229 @@
+/* components.css */
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2.75rem;
+  color: var(--color-titulo);
+  
+}
+
+h3 {
+  font-family: var(--font-secundaria);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-titulo);
+  padding: 0.8rem;
+}
+
+h4 {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-titulo);
+}
+
+.card-bloque {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--color-primario-claro);
+  padding: 1rem 1rem;
+  border-radius: var(--radius);
+  margin-top: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.iconos-habilidades,
+.iconos-valores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.iconos-habilidades span,
+.iconos-valores span {
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid #AEAEAE;
+  padding: 0.3rem 0.62rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.servicios-lista {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.servicio {
+  min-width: 240px;
+  flex: 1;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #AEAEAE;
+}
+
+.icono-servicio {
+  width: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.proceso {
+  font-family: var(--font-secundaria);
+  font-weight: 600;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--color-primario);
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  gap: 0.625rem;
+  margin-top: 3rem;
+}
+
+.nota {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.proyectos-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1.25rem;
+  gap: 2.5rem 4.5rem;
+}
+
+.proyecto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 260px;
+  min-width: 280px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  border: 1px solid #AEAEAE;
+  /*animaciones*/
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.proyecto-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-detalles {
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-top: 0.625rem;
+  display: inline-block;
+  background-color: var(--color-boton);
+  color: black;
+  padding: 0.625rem;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease;
+}
+
+.btn-detalles:hover {
+  background-color: var(--color-hover);
+}
+
+.formulario {
+ 
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+label{
+
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+input, textarea {
+  font-family: var(--font-secundaria);
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+textarea{
+  height: 150px;
+}
+
+button[type="submit"] {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: auto;
+  background-color: var(--color-boton);
+  color: black;
+  border: none;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-hover);
+}
+
+.redes-sociales {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0rem;
+  gap: 1rem;
+}
+
+.redes-sociales a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: 0 0.5rem;
+  gap: 1rem;
+}
+
+.redes-sociales span{
+  font-weight: normal;
+  font-size: 0.8rem;
+}
