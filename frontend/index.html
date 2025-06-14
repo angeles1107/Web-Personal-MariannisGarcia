@@ -1,9 +1,190 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Mi Web Personal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina web personal Mariannis Garcia</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/fonts.css"> 
 </head>
 <body>
-    <h1>¡Hola Mundo!</h1>
-    <p>Esta es mi primera pagina web desplegada en vercel</p>
+
+  <!-- Navegación -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Mariannis Garcia</div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobremi">Sobre mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-content"> 
+      <img src="assets/images/avatar.png" alt="Mariannis" class="hero-img" />
+      <div class="hero-text">
+        <h1>Hola, soy <strong>Mariannis Garcia</strong></h1>
+        <p>Estudiante de Ingeniería en Informática. Explorando el mundo de la web y la Inteligencia Artificial</p>
+        <a href="#contacto" class="btn-contacto">Contáctame</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Mí -->
+<section id="sobremi" class="sobre-mi">
+  <div class="container">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy estudiante del 9no semestre de Ingeniería en Informática en la Universidad Nacional Experimental de Guayana (UNEG).
+      Actualmente estoy aprendiendo desarrollo web con HTML, CSS y React. También he realizado ejercicios prácticos en Python y diseño básico en Figma.
+      Me considero una persona comprometida, curiosa y con muchas ganas de mejorar.
+    </p>
+
+    <!-- Habilidades -->
+    <div class="card-bloque">
+      <h3>Habilidades</h3>
+      <div class="iconos-habilidades">
+        <span><img src="assets/images/iconhtml.svg" alt="HTML"> HTML</span>
+        <span><img src="assets/images/iconcss.svg" alt="CSS"> CSS</span>
+        <span><img src="assets/images/iconjs.svg" alt="JavaScript"> JavaScript</span>
+        <span><img src="assets/images/iconreact.svg" alt="React"> React</span>
+        <span><img src="assets/images/iconpython.svg" alt="Python"> Python</span>
+      </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="card-bloque">
+      <h3>Valores</h3>
+      <div class="iconos-valores">
+        <span><img src="assets/images/iconresponsable.svg" alt="Responsable"> Responsable</span>
+        <span><img src="assets/images/iconlibro.svg" alt="Autodidacta"> Autodidacta</span>
+        <span><img src="assets/images/iconequipo.svg" alt="Trabajo en equipo"> Trabajo en equipo</span>
+        <span><img src="assets/images/icontiempo.svg" alt="Gestión del tiempo"> Gestión del tiempo</span>
+        <span><img src="assets/images/iconanalisis.svg" alt="Análisis"> Capacidad de análisis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section id="servicios" class="servicios">
+  <div class="container">
+    <h2>¿En qué te puedo ayudar?</h2>
+
+    <div class="servicios-lista">
+      <div class="servicio">
+        <img src="assets/images/iconweb.svg" alt="Sitios web básicos" class="icono-servicio">
+        <h4>Sitios web básicos</h4>
+        <p>Diseño y desarrollo de sitios estáticos con HTML, CSS y componentes básicos en React. Ideales para portafolios, páginas personales o informativas.</p>
+      </div>
+      <div class="servicio">
+        <img src="assets/images/iconfigma.svg" alt="Interfaz" class="icono-servicio">
+        <h4>Diseño de interfaces</h4>
+        <p>Aprendiendo diseño visual y estructuración de interfaces. Puedo armar wireframes y prototipos simples para ideas web.</p>
+      </div>
+      <div class="servicio">
+        <img src="assets/images/iconautomatizacion.svg" alt="automatizaciones" class="icono-servicio">
+        <h4>Automatizaciones con Python</h4>
+        <p>Estoy explorando el uso de Python para tareas simples o lógicas básicas. He hecho proyectos de búsqueda y machine learning usando IA.</p>
+      </div>
+    </div>
+
+    <div class="proceso">
+      <span>Escucho tu idea o necesidad</span>
+      <span>Creo un diseño</span>
+      <span>Desarrollo una versión básica</span>
+      <span>Te muestro un avance</span>
+    </div>
+
+    <p class="nota">
+      ¡Estoy abierta a colaborar en proyectos reales para seguir aprendiendo!
+    </p>
+  </div>
+</section>
+
+<!-- Portafolio -->
+<section id="portafolio" class="portafolio">
+  <div class="container">
+    <h2>Portafolio</h2>
+    <div class="proyectos-grid">
+
+      <div class="proyecto-card">
+        <img src="assets/images/puzle8.jpg" alt="Puzzle con IA" class="imgproyecto">
+        <h4>Puzzle 8 con Inteligencia Artificial</h4>
+        <p>Proyecto desarrollado con Python y Pygame para resolver el clásico juego del 8 puzzle usando dos agentes: uno con BFS y otro con A*.</p>
+        <a href="#" class="btn-detalles">ver detalles</a>
+      </div>
+
+      <div class="proyecto-card">
+        <img src="assets/images/tareas.jpg" alt="Tareas" class="imgproyecto">
+        <h4>Lista de Tareas Personal</h4>
+        <p>Página web interactiva donde el usuario puede agregar, tachar y eliminar tareas. Hecha con JavaScript y diseño funcional.</p>
+        <a href="#" class="btn-detalles">ver detalles</a>
+      </div>
+
+      <div class="proyecto-card">
+        <img src="assets/images/lectura.jpg" alt="lectura" class="imgproyecto">
+        <h4>Página: Los Juegos del Hambre</h4>
+        <p>Página dedicada a la saga literaria Los Juegos del Hambre. Incluye sinopsis de cada libro, opinión personal y elementos visuales.</p>
+        <a href="#" class="btn-detalles">ver detalles</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>¿Tienes una idea, proyecto o solo quieres saludar? ¡Estoy disponible para colaborar o responder cualquier consulta!</p>
+
+    <form class="formulario">
+      <label for="nombreusuario">Nombre</label>
+      <input type="text" id="nombreusuario" name="nombre" placeholder="Tu nombre" required />
+      
+      <label for="correoelectronico">Correo electrónico</label>
+      <input type="email" id="correoelectronico" name="correo" placeholder="Tu correo electrónico" required />
+      
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="redes-sociales">
+      <p>También puedes encontrarme en:</p>
+      <a href="https://github.com/angeles1107" target="_blank" aria-label="Ir al perfil de GitHub">
+        <img src="assets/images/iconGithub.svg" alt=" "/>
+        <span>GitHub</span>
+      </a>
+      <a href="#">
+        <img src="assets/images/iconIk.svg" alt=" " aria-label="Ir al perfil de Linkedin">
+        <span>Linkedin</span>
+      </a>
+
+      <a href="mailto:mariannisgarcia11@gmail.com"  aria-label="Enviar un correo">
+        <img src="assets/images/iconmail.svg" alt=" "/>
+        <span>Correo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 Mariannis Garcia. Sitio creado con ❤️</p> 
+</footer>
+
+<script type="module" src="js/main.js"></script>
+
 </body>
 </html>
