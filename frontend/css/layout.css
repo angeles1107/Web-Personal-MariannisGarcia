@@ -214,6 +214,22 @@ footer {
   section {
     scroll-margin-top: 80px;
   }
+
+.alerta {
+    left: 25%;
+    right: auto;
+    transform: translateX(-50%) translateY(-20px);
+    min-width: 150px; /* Asegura ancho mínimo */
+    font-size: 0.8rem; /* Aumenta si se ve muy pequeño */
+    padding: 1rem;/* Asegura espacio interno */
+    text-align: center; /* Centra el texto si es multilinea */
+    white-space: normal; /* Permite salto de línea */
+    top: 6rem;
+  }
+
+  .alerta.mostrar {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .navbar.scrolled {
