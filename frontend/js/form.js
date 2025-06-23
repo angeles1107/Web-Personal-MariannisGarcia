@@ -5,7 +5,7 @@ export default function setupFormulario() {
 
   if (!form || !alerta || !alertaMensaje) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nombre = document.getElementById('nombreusuario').value.trim();
@@ -14,26 +14,46 @@ export default function setupFormulario() {
 
     const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
 
-    let mensaje = '';
-    let tipo = '';
-
     if (!nombre || !correo || !texto) {
-      mensaje = 'Por favor completa todos los campos.';
-      tipo = 'error';
-    } else if (!emailValido) {
-      mensaje = 'Por favor introduce un correo válido.';
-      tipo = 'error';
-    } else {
-      mensaje = 'Mensaje enviado con éxito';
-      tipo = 'exito';
-      form.reset();
+      mostrarAlerta('Por favor completa todos los campos.', 'error');
+      return;
     }
 
-    mostrarAlerta(mensaje, tipo);
+    if (!emailValido) {
+      mostrarAlerta('Por favor introduce un correo válido.', 'error');
+      return;
+    }
+
+
+    try {
+      const respuesta = await fetch('https://web-personal-backend.onrender.com/api/mensaje', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nombre_usuario: nombre,
+          correo: correo,
+          mensaje: texto,
+        }),
+      });
+
+      const data = await respuesta.json();
+
+      if (respuesta.ok) {
+        mostrarAlerta('Mensaje enviado con éxito', 'exito');
+        form.reset();
+      } else {
+        mostrarAlerta(` ${data.mensaje || 'Error del servidor'}`, 'error');
+      }
+    } catch (error) {
+      console.error(error);
+      mostrarAlerta('No se pudo enviar el mensaje. Intenta más tarde.', 'error');
+    }
   });
 
   function mostrarAlerta(mensaje, tipo) {
-    alerta.className = `alerta ${tipo} visible`; // Quita clases anteriores y aplica nuevas
+    alerta.className = `alerta ${tipo} visible`;
     alertaMensaje.textContent = mensaje;
     alerta.style.display = 'block';
 
@@ -41,7 +61,7 @@ export default function setupFormulario() {
       alerta.classList.remove('visible');
       setTimeout(() => {
         alerta.style.display = 'none';
-      }, 300); // Tiempo para la animación de salida
+      }, 300);
     }, 4000);
   }
 }
