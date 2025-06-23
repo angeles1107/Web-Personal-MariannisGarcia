@@ -13,6 +13,10 @@ app.use(express.json());
 app.use('/api/proyectos', proyectoRoutes);
 app.use('/api/mensaje', mensajeRoutes);
 
+app.get('/',(req, res) => {
+  res.send('Backend corriendo');
+});
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
