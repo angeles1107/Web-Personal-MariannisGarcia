@@ -36,7 +36,7 @@ function renderizarProyectos(proyectos) {
     contenedor.appendChild(div);
     
     setTimeout(() => {
-      div.classList.add('visible'); // <-- ¡Añade esta línea clave!
+      div.classList.add('visible');
     }, 100 * index);
     
   });

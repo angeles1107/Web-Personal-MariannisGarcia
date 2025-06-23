@@ -1,4 +1,3 @@
-// js/animations.js
 export default function setupAnimations() {
   const elementos = document.querySelectorAll('.proyecto-card');
 

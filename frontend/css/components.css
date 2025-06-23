@@ -1,4 +1,3 @@
-/* components.css */
 
 h2 {
   font-size: 2.25rem;
@@ -259,11 +258,11 @@ button[type="submit"]:hover {
 }
 
 .alerta.exito {
-  background-color: #4CAF50; /* verde */
+  background-color: #4CAF50;
 }
 
 .alerta.error {
-  background-color: #F44336; /* rojo */
+  background-color: #F44336; 
 }
 
 .alerta.oculto {

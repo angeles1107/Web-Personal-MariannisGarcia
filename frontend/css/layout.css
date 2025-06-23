@@ -1,4 +1,4 @@
-/* layout.css */
+
 body {
   font-family: var(--font-base);
   font-size: var(--font-size-base);
@@ -21,8 +21,8 @@ header {
 
 .navbar {
   position: fixed; /* <-- Hace que se quede fija arriba */
-  top: 0;           /* <-- Se pega al borde superior */
-  width: 100%;      /* <-- Ocupa todo el ancho */
+  top: 0;          
+  width: 100%;      
   z-index: 1000;    /* <-- Se asegura de estar encima de todo */
   font-family: var(--font-secundaria);
   font-weight: normal;
@@ -219,9 +219,9 @@ footer {
     left: 25%;
     right: auto;
     transform: translateX(-50%) translateY(-20px);
-    min-width: 150px; /* Asegura ancho mínimo */
-    font-size: 0.8rem; /* Aumenta si se ve muy pequeño */
-    padding: 1rem;/* Asegura espacio interno */
+    min-width: 150px; 
+    font-size: 0.8rem; 
+    padding: 1rem;
     text-align: center; /* Centra el texto si es multilinea */
     white-space: normal; /* Permite salto de línea */
     top: 6rem;
